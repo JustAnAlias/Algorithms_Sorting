@@ -8,7 +8,7 @@ package algorithms_assignment1_sorting;
 import java.util.Arrays;
 
 /**
- * W
+ * 
  *
  * @author RL
  */
@@ -46,7 +46,6 @@ public class SortingAlgorithms {
     public static void mergeSort(String[] arr) {
         if (arr.length > 1) {
             // split array into two halves
-            
             String[] left = Arrays.copyOfRange(arr, 0, arr.length/2);
             String[] right = Arrays.copyOfRange(arr, arr.length/2, arr.length);
             
