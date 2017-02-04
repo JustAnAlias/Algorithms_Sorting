@@ -5,12 +5,8 @@
  */
 package algorithms_assignment1_sorting;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Scanner;
 
 /**
  *
@@ -49,8 +45,8 @@ public class AlgoRithms_Assignment1_Sorting {
         System.out.println("SelectionSort took: " + ((selEndTime - selStartTime) / 1_000_000) + " ms");
 
         // Printing limitArray to see if sorting works.
-//    for(String string : limitArray) {
-//        System.out.println(string);
+//    for(String string : words) {
+//       System.out.println(string);
 //    }
     }
 

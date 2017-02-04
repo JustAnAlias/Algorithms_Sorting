@@ -5,7 +5,7 @@
  */
 package algorithms_assignment1_sorting;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * W
@@ -46,34 +46,17 @@ public class SortingAlgorithms {
     public static void mergeSort(String[] arr) {
         if (arr.length > 1) {
             // split array into two halves
-            String[] left = mergeLeftHalf(arr);
-            String[] right = mergeRightHalf(arr);
+            
+            String[] left = Arrays.copyOfRange(arr, 0, arr.length/2);
+            String[] right = Arrays.copyOfRange(arr, arr.length/2, arr.length);
+            
             // run recursive
             mergeSort(left);
             mergeSort(right);
+            
             // merge sorted halves
             merge(arr, left, right);
         }
-    }
-
-    public static String[] mergeLeftHalf(String[] arr) {
-        int size1 = arr.length / 2;
-        String[] left = new String[size1];
-        for (int i = 0; i < size1; i++) {
-            left[i] = arr[i];
-        }
-        return left; // Returns the first half of array.
-    }
-
-    public static String[] mergeRightHalf(String[] arr) {
-        int size1 = arr.length / 2;
-        int size2 = arr.length - size1;
-        String[] right = new String[size2];
-        for (int i = 0; i < size2; i++) {
-            right[i] = arr[i + size1];
-        }
-        return right; // Returns the second half of array.
-
     }
 
 // Merges left and right arrays into result array.  
